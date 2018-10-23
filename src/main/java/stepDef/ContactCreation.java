@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class LoginStepDef {
+public class ContactCreation {
 	
 	WebDriver driver;
 	
@@ -47,8 +46,15 @@ public class LoginStepDef {
 	   String homepage=driver.getTitle();
 	   System.out.println(homepage);   
 	}
-	@Then("^user closes the browser$")
-	public void user_closes_the_browser() {
-		driver.quit();
+	
+	@Then("^user click on new contact button$")
+	public void user_click_on_new_contact_button() {
+	   
 	}
+
+	@Then("^user populate \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_populate_and_and(String arg1, String arg2, String arg3)  {
+	    
+	}
+
 }

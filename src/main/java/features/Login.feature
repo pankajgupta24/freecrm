@@ -3,14 +3,15 @@ Scenario Outline: free CRM login test
 
 Given user is already on login page
 When title of login page  is free CRM
-Then user enters "<username>"
-Then user enters "<password>"
+Then user enters "<username>" and "<password>"
 Then user click on logion button
 Then user reaches homepage
+Then user closes the browser
 
 Examples:
-		|username		| password|
-		|pankajgupta24	| 9015pankaj|
+		| username		| password|
+		| pankajgupta24	| 9015pankaj|
+		| admin			|admin|
 
 #Scenario: user create new contact
 #Given user is already on homepage
